@@ -17,9 +17,10 @@ function Word() {
             return await dataJson.json();
         };
 
-        const setusername = async () => {
-            const dataJson = await fetch(" https://animalfinderapi.herokuapp.com/", {
+        const postData = async () => {
+            const dataJson = await fetch(" https://animalfinderapi.herokuapp.com/game", {
                 body: JSON.stringify({
+                    methode:'POST',
                     username: "",
                     iswin: false,
                     username
